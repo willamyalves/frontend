@@ -1,50 +1,86 @@
-# React + TypeScript + Vite
+# Multistep Form com TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Interface
 
-Currently, two official plugins are available:
+![multistep-form-typescript](./public/multistep-form-print.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto é um formulário multi-etapas desenvolvido em **React** com **TypeScript**. O objetivo do formulário é permitir que os usuários façam uma avaliação de um produto, passando por várias etapas de coleta de informações, desde identificação até a conclusão do envio.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Formulário multi-etapas com transições entre as etapas.
+- Validação dos campos do formulário.
+- Ícones e design intuitivo para melhorar a experiência do usuário.
+- Resumo final da avaliação antes do envio.
+- Utilização de hooks personalizados para navegação entre etapas.
 
-- Configure the top-level `parserOptions` property like this:
+## Como Funciona
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+O formulário possui 3 etapas principais:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Identificação**: Coleta do nome e e-mail do usuário.
+2. **Avaliação**: O usuário seleciona a sua satisfação com o produto e adiciona um comentário.
+3. **Resumo e Envio**: O resumo da avaliação é apresentado ao usuário antes de finalizar o envio.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Navegação entre etapas:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Botão "Voltar" para retornar à etapa anterior.
+- Botão "Avançar" para ir à próxima etapa, com validação dos campos.
+- Na última etapa, o botão "Enviar" aparece para finalizar a avaliação.
+
+## Tecnologias Utilizadas
+
+- **React**: Biblioteca JavaScript para criação da interface de usuário.
+- **TypeScript**: Superset de JavaScript para adicionar tipagem estática ao projeto.
+- **React Hooks**: Utilização de hooks personalizados para controle das etapas do formulário.
+- **React Icons**: Biblioteca de ícones usada para melhorar a interface.
+- **CSS Modules**: Estilização dos componentes de maneira modular.
+
+## Como Executar o Projeto
+
+### Pré-requisitos
+
+- Node.js instalado
+- Gerenciador de pacotes `npm` ou `yarn`
+
+### Passos para execução
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/multistep-form.git
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+   ou
+   ```bash
+   yarn install
+   ```
+3. Execute o projeto:
+   ```bash
+   npm start
+   ```
+   ou
+   ```bash
+   yarn start
+   ```
+
+O projeto estará rodando em `http://localhost:3000`.
+
+## Estrutura do Projeto
+
+- **App.tsx**: Componente principal do projeto, responsável por gerenciar as etapas e os dados do formulário.
+- **hooks/useForm.tsx**: Hook personalizado para controlar a navegação entre as etapas do formulário.
+- **components/UserForm.tsx**: Componente responsável pela coleta de dados de identificação (nome e e-mail).
+- **components/ReviewForm.tsx**: Componente onde o usuário avalia o produto e insere um comentário.
+- **components/Thanks.tsx**: Componente final que exibe o resumo da avaliação antes do envio.
+- **components/Steps.tsx**: Componente que exibe o progresso das etapas do formulário.
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
