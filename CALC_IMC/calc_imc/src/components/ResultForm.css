@@ -1,0 +1,62 @@
+.container-result{
+    width: 400px;
+    border-radius: 5px;
+    background-color: #1D1E33;
+    padding: 20px 15px;
+    text-align: center;
+}
+.container-result h2{
+    margin-bottom: 20px;
+    font-size: 42px;
+}
+.content-situation{
+    color: rgb(207, 207, 207);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.watch-classifications{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: rgb(231, 231, 231);
+}
+.imcTable{
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.titles p{
+    width: 33%;
+}
+.titles{
+    display: flex;
+    width: 100%;   
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(199, 199, 199, 50%);
+}
+.lines p{
+    width: 33%;
+}
+.lines{
+    display: flex;
+    width: 100%;   
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(199, 199, 199, 50%);
+}
+#back-btn{
+    margin-top: 20px;
+}
+.yellow{
+    color: rgb(212, 199, 19);
+}
+.green{
+    color: rgb(24, 167, 24);
+}
+.dark-yellow{
+    color: rgb(146, 132, 0);
+}
+.orange{
+    color: rgb(245, 159, 0);
+}
+.red{
+    color: rgba(255, 32, 32, 0.932);
+}

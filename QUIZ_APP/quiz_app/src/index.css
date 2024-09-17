@@ -1,0 +1,37 @@
+* {
+  font-family: "Raleway", "sans-serif";
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  min-height: 100vh;
+  height: 100%;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+img {
+  max-width: 100%;
+}
+button {
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 14px 24px;
+  background: linear-gradient(
+    90deg,
+    rgba(132, 0, 255, 1) 0%,
+    rgba(210, 61, 255, 1) 100%
+  );
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+}
+button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(210, 61, 255, 1) 0%,
+    rgba(132, 0, 255, 1) 100%
+  );
+}

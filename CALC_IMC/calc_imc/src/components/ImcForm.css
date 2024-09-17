@@ -1,0 +1,33 @@
+.container-form{
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    background-color: #1D1E33;
+}
+.container-form-inside{
+    padding: 20px 40px;
+    text-align: center;
+}
+.container-form-inside h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+#height-label, #weight-label, #height, #weight{
+    display: block;
+    text-align: start;
+    width: 100%;
+}
+#height-label, #weight-label{
+    font-weight: bold;
+}
+#height, #weight{
+    padding: 15px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 8px 0;
+}
+.action-control{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}

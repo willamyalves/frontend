@@ -1,0 +1,43 @@
+.new-post {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+.new-post h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+span,
+textarea {
+  display: block;
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0 15px;
+  padding: 5px;
+}
+input[type="text"] {
+  height: 30px;
+}
+textarea {
+  min-height: 80px;
+  max-height: 200px;
+  min-width: 500px;
+  max-width: 500px;
+}
+.btn {
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #fff;
+  color: #0b0e12;
+  border: 1px solid #fff;
+}
+.btn:hover {
+  background-color: #0b0e12;
+  color: #fff;
+}
